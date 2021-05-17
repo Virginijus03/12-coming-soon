@@ -16,3 +16,12 @@
 
 
 /* CUSTOM STYLE BELOW THIS COMENT */
+
+.bg-primary {
+    background-color: var(--color-primary);
+}
+
+.bg-secondary {
+    background-color: var(--color-secondary);
+}
+
