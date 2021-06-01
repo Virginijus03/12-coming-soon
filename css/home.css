@@ -4,7 +4,8 @@
 @import './base/layout.css';
 
 /* 3rd party */
-@import'./3rd-party/font-awesome.min.css';
+@import './3rd-party/font-awesome.min.css';
+
 /* components */
 @import './components/button.css';
 @import './components/clock.css';
@@ -61,7 +62,6 @@ footer.container {
   padding-top: 0;
 }
 
-
 .socials {
   display: flex;
   gap: 10px;
@@ -83,5 +83,5 @@ footer.container {
 }
 .socials > .fa:hover {
   background-color: var(--color-light);
-  color: var(--color-light);
+  color: var(--color-primary);
 }
