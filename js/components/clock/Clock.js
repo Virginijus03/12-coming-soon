@@ -121,5 +121,7 @@ kadangi jau nustatem kelintais metais pagal duota this.targetDate bus tas gimtad
 galim paskaiciuoti laiko skirtuma nuo "dabar"
 apskaiciuoti kiek tu milisekundziu skirtumas sudaro:
 dienu, valandu, minuciu, sekundziu
+
 apskaiciuotas laikas (d, v, m, s) grazinamos array formatu
 */
+
