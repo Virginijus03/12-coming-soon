@@ -81,9 +81,28 @@ main > .row-big > div {
 
 /* FOOTER SECTION */
 footer.container {
-  padding-top: 0;
+  padding-top: 5px;
+  color: #fff8;
 }
-
+.bottom-texts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.7em;
+}
+.bottom-texts a {
+  color: #54cffb;
+  text-decoration: none;
+}
+.bottom-texts > .logo {
+  height: 100px;
+  width: 200px;
+}
+.bottom-texts > .pseudo {
+  display: flex;
+  gap: 20px;
+  color: #ffff;
+}
 .socials {
   display: flex;
   gap: 10px;
