@@ -117,12 +117,11 @@ palyginame laikus milisekundemis
 jeigu A > B, reikia gimtadinis dar tik laukia/ateina
 jeigu A < B, reiskia mes jau esame po gimtadienio
 tokiu atveju, gimtadienis bus "einamieji-metai"++ (2022)
-
 kadangi jau nustatem kelintais metais pagal duota this.targetDate bus tas gimtadienis, tai
 galim paskaiciuoti laiko skirtuma nuo "dabar"
 apskaiciuoti kiek tu milisekundziu skirtumas sudaro:
 dienu, valandu, minuciu, sekundziu
 
 apskaiciuotas laikas (d, v, m, s) grazinamos array formatu
-
 */
+

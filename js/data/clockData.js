@@ -7,8 +7,7 @@ const clockData = {
     hour: 18,
     minutes: 0,
     seconds: 0,
-}
-
+};
 
 */
-export{ clockData }
+export { clockData }
