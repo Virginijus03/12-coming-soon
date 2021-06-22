@@ -54,6 +54,23 @@
   font-size: 20px;
   color: var(--color-grey);
 }
+.hero form > input {
+  color: var(--color-light);
+  background-color: transparent;
+  border-bottom-color: var(--color-light);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.hero form ::placeholder {
+  color: var(--color-light);
+}
+.hero form {
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+
+}
 
 /* MAIN CONTENT SECTION */
 main > .row-big > div {
