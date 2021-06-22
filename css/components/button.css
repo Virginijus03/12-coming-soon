@@ -1,8 +1,17 @@
 .btn {
   background-color: var(--color-secondary);
-  height: 40px;
+  line-height: 40px;
   display: inline-block;
   float: right;
   padding: 0px 30px;
   border-radius: 3px;
+  color: var(--color-light) ;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 8px #002;
+  transition: all 0.5s;
+}
+.btn:hover{
+  box-shadow: 0 2px 8px #006;
+
 }

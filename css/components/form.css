@@ -16,6 +16,11 @@ form > input:nth-of-type(2) {
 float: right;
 }
 form > textarea {
+    resize: vertical;
+    min-height: 96px;
+    max-height: 292px;
+}
+form > textarea {
   margin-bottom: 20px;
   width: 100%;
   line-height: 28px;
