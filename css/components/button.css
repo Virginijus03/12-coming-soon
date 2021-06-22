@@ -1,0 +1,8 @@
+.btn {
+  background-color: var(--color-secondary);
+  height: 40px;
+  display: inline-block;
+  float: right;
+  padding: 0px 30px;
+  border-radius: 3px;
+}
