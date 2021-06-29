@@ -31,7 +31,15 @@ class Toast {
         this.closeDOM = this.DOM.querySelector('.fa-times');
     }
 
-    show() {
+    show(msg, title, state) {
+        if (!msg) {
+            return false;
+        }
+
+        this.DOM.dataset.state = state;
+        this.messageDOM.innerText = msg;
+        this.titleDOM.innerText = title;
+
         this.DOM.classList.remove('hide');
     }
 
@@ -40,49 +48,74 @@ class Toast {
     }
 
     success(msg, title = 'Success!') {
-        if (!msg) {
-            return false;
-        }
-
-        this.show();
-        this.DOM.dataset.state = 'success';
-        this.messageDOM.innerText = msg;
-        this.titleDOM.innerText = title;
+        this.show(msg, title, 'success');
     }
 
     info(msg, title = 'Information!') {
-        if (!msg) {
-            return false;
-        }
-
-        this.show();
-        this.DOM.dataset.state = 'info';
-        this.messageDOM.innerText = msg;
-        this.titleDOM.innerText = title;
+        this.show(msg, title, 'info');
     }
 
     warning(msg, title = 'Warning!') {
-        if (!msg) {
-            return false;
-        }
-
-        this.show();
-        this.DOM.dataset.state = 'warning';
-        this.messageDOM.innerText = msg;
-        this.titleDOM.innerText = title;
+        this.show(msg, title, 'warning');
     }
 
     error(msg, title = 'Error!') {
-        if (!msg) {
-            return false;
-        }
+        this.show(msg, title, 'error');
 
-        this.show();
-        this.DOM.dataset.state = 'error';
-        this.messageDOM.innerText = msg;
-        this.titleDOM.innerText = title;
     }
-
+    /*
+        show() {
+            this.DOM.classList.remove('hide');
+        }
+    
+        hide() {
+            this.DOM.classList.add('hide');
+        }
+    
+        success(msg, title = 'Success!') {
+            if (!msg) {
+                return false;
+            }
+    
+            this.show();
+            this.DOM.dataset.state = 'success';
+            this.messageDOM.innerText = msg;
+            this.titleDOM.innerText = title;
+        }
+    
+        info(msg, title = 'Information!') {
+            if (!msg) {
+                return false;
+            }
+    
+            this.show();
+            this.DOM.dataset.state = 'info';
+            this.messageDOM.innerText = msg;
+            this.titleDOM.innerText = title;
+        }
+    
+        warning(msg, title = 'Warning!') {
+            if (!msg) {
+                return false;
+            }
+    
+            this.show();
+            this.DOM.dataset.state = 'warning';
+            this.messageDOM.innerText = msg;
+            this.titleDOM.innerText = title;
+        }
+    
+        error(msg, title = 'Error!') {
+            if (!msg) {
+                return false;
+            }
+    
+            this.show();
+            this.DOM.dataset.state = 'error';
+            this.messageDOM.innerText = msg;
+            this.titleDOM.innerText = title;
+        }
+    */
     addEvents() {
         this.closeDOM.addEventListener('click', () => {
             this.hide();

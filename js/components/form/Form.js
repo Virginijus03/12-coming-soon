@@ -1,6 +1,7 @@
 class Form {
-    constructor(selector) {
+    constructor(selector, toastObject) {
         this.selector = selector;
+        this.toastObject = toastObject;
 
         this.formDOM = null;
         this.allInputsDOM = [];
@@ -98,29 +99,32 @@ class Form {
                 if (validationRule === 'email') {
                     if (this.isValidEmail(element.value) === false) {
                         allGood = false;
-                        console.error('ERROR: nera email adreso!');
+                        this.toastObject.error('ERROR: nera email adreso!');
                         break;
                     }
                 }
                 if (validationRule === 'name') {
                     if (this.isValidName(element.value) === false) {
                         allGood = false;
-                        console.error('ERROR: nera vardo!');
+                        this.toastObject.error('ERROR: nera vardo!');
                         break;
                     }
                 }
                 if (validationRule === 'text') {
                     if (this.isValidMessage(element.value) === false) {
                         allGood = false;
-                        console.error('ERROR: nera zinutes!');
+                        this.toastObject.error('ERROR: nera zinutes!');
                         break;
                     }
                 }
             }
             //console.log('All Good?', allGood)
 
+            if (allGood) {
+                this.toastObject.success('Forma isiusta.');
+            }
 
-        });
+        })
 
     }
 }

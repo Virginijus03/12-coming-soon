@@ -16,15 +16,16 @@ const toast = new Toast;
 // toast.warning('Tu cia ziurek..!');
 
 // toast.error('Yra klaida!', 'Nauja antraste');
-toast.error('Yra klaida!');
+//toast.error('Yra klaida!');
 // toast.error();
 
 new Clock('#clock_1', clockData);
 //socials('footer .socials', socialsData);
 new Progressbar('.left-column', progressBarData);
 new SocialsOOP('.row-big.socials', socialsData);
-new Form('.hero form');
-new Form('main form');
+new Form('.hero form', toast);
+new Form('main form', toast);
+
 
 
 /*
