@@ -4,6 +4,7 @@ class Progressbar {
         this.data = data;
 
         this.DOM = null;
+        this.allProgresBar = null;
         this.init();
 
     }
@@ -19,6 +20,8 @@ class Progressbar {
             return false;
         }
         this.render();
+        this.addEvent();
+
     }
     isValidSelector() {
         if (typeof this.selector !== 'string' ||
@@ -50,8 +53,32 @@ class Progressbar {
                 </div>`
         }
         this.DOM.innerHTML += HTML;
+        this.allProgresBar = document.querySelectorAll(".progress-bar");
+        console.log(this.allProgresBar);
     }
+    addEvent() {
+        window.addEventListener('scroll', () => {
+            //const scrollPozicion = window.scrollY;
+            //const screnHeight = window.innerHeight;
+            const screenBottom = window.scrollY + window.innerHeight;
+            console.log('jhvuih');
+
+            for (let i = 0; i < this.allProgresBar.length; i++) {
+                const element = this.allProgresBar[i];
+                const elementBottom = element.offsetHeight + element.offsetTop;
+                if (screenBottom >= elementBottom) {
+                    element.classList.add('uzkrovimas');
+                    console.log('animuojame');
+                }
+            }
+
+        })
+
+    }
+
+
 }
+
 
 export { Progressbar }
 
